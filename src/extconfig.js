@@ -1,4 +1,5 @@
 ﻿var extend = require("extend");
+var path = require("path");
 
 function isString(value) {
     return typeof value == "string";
@@ -50,7 +51,15 @@ function processConfig(rootNode, currentNode) {
 module.exports = function (configSource) {
     "use strict";
     
-    var config = isString(configSource) ? require(configSource) : extend(true, {}, configSource);
+    var config;
+    if (isString(configSource)) {
+        var configPath = path.resolve(process.cwd(), configSource);
+        config = require(configPath);
+    } else {
+        config = extend(true, {}, configSource);
+    }
+
     processConfig(config, config);
+
     return config;
 }
