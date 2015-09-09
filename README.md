@@ -14,7 +14,7 @@ Example:
   }
 }
 ```
-translates into =>
+translates into
 ```
 {
   "workingDir": "./wwwroot",
