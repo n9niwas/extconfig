@@ -1,0 +1,17 @@
+{
+  "name": "extconfig",
+  "version": "0.1.0",
+  "author": {
+    "name": "Anton Demchenko",
+    "email": "ademchk@gmail.com"
+  },
+  "description": "The extended config loader.",
+  "main": "src/extconfig.js",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/n9niwas/extconfig"
+  },
+  "dependencies": {
+    "extend": "3.0.0"
+  }
+}
